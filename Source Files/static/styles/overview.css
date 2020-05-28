@@ -1,0 +1,91 @@
+#overviewHeader {
+    display: flex;
+    margin-left: 440px;
+    margin-top: 60px;
+}
+
+.overviewHeaderClass {
+    padding-right: 90px;
+}
+
+#overviewHeaderSalesText {
+    padding-right: calc(100vw - 1050px + 90px);
+}
+
+#overviewData {
+    width: calc(100vw - 450px);
+    height: calc(100vh - 380px);
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #7a7a7a;
+    margin-left: 390px;
+    margin-top: 20px;
+    overflow-y: scroll;
+}
+
+#overviewData::-webkit-scrollbar {
+    width: 20px;
+}
+
+#overviewData::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 25px;
+    border: 8px solid #101010;
+}
+
+.overviewRecord {
+    display: flex;
+    text-align: center;
+    height: 75px;
+    border: 1px solid #7a7a7a;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.2s;
+    /* cursor: pointer; */
+    background-color: #101010;
+}
+
+.overviewRecord:hover {
+    transition: 0.2s;
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+}
+
+.overviewRecordMonthValue {
+    width: 145px;
+}
+
+.overviewRecordYearValue {
+    width: 125px;
+}
+
+.overviewRecordSalesValue {
+    padding-right: calc(100vw - 1125px + 90px);
+    width: 125px;
+}
+
+.overviewRecordTotalValue {
+    width: 175px;
+}
+
+.overviewRecordValues {
+    padding-top: 27px;
+}
+
+#overviewDataHeadSpacer {
+    height: 10px;
+}
+
+#overviewDataEndSpacer {
+    height: 30px;
+}
+
+#overviewTotalRevenue {
+    margin-left: calc(100vw - 255px);
+    width: 175px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#sidebarOverview {
+    background-color: #9c5c00;
+}

@@ -1,0 +1,14 @@
+Table Description
+
+SERVICE(SERVICETYPE*, PRICE)
+MEMBER(MEMBERID*, MEMBERNAME, GENDER, EMAIL, PHONE, ADDRESS, MEMBERSHIP)
+INVOICE(INVOICEID*, MEMBERID, NAME, DATE, GROSSPRICE, DISCOUNT, TOTALPRICE) 
+// GROSSPRICE is before discount and TOTALPRICE is after discount. GROSS PRICE and DISCOUNT is optional but is kept for future purposes where discounts can be applied where it is only required if DISCOUNT is REAL value stating the percentage discount
+INVOICESERVICE(INVOICEID*, SERVICETYPE*)
+
+
+ER Diagram
+
+|------|    /|-------|    /|--------------|\    |-------|
+|MEMBER|-----|INVOICE|-----|INVOICESERVICE|-----|SERVICE|
+|------|    \|-------|    \|--------------|/    |-------|

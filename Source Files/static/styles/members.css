@@ -1,0 +1,125 @@
+#membersHeader {
+    display: flex;
+    margin-left: 440px;
+    margin-top: 60px;
+}
+
+.membersHeaderClass {
+    padding-right: 90px;
+}
+
+#membersHeaderServiceTypeText {
+    padding-right: calc(100vw - 1170px + 90px);
+}
+
+#membersData {
+    width: calc(100vw - 450px);
+    height: calc(100vh - 380px);
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #7a7a7a;
+    margin-left: 390px;
+    margin-top: 20px;
+    overflow-y: scroll;
+}
+
+#membersData::-webkit-scrollbar {
+    width: 20px;
+}
+
+#membersData::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 25px;
+    border: 8px solid #101010;
+}
+
+.membersRecord {
+    display: flex;
+    text-align: center;
+    height: 75px;
+    border: 1px solid #7a7a7a;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #101010;
+}
+
+.membersRecord:hover {
+    transition: 0.2s;
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+}
+
+.membersRecordID {
+    width: 115px;
+}
+
+.membersRecordGender {
+    width: 135px;
+}
+
+.membersRecordPhone {
+    width: 150px;
+}
+
+.membersRecordName {
+    padding-right: calc(100vw - 1340px + 90px);
+    width: 175px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.membersRecordValues {
+    padding-top: 27px;
+}
+
+.membersRecordMembership {
+    width: 150px;
+    text-align: center;
+}
+
+#membersHeadSpacer {
+    height: 10px;
+}
+
+#membersEndSpacer {
+    height: 30px;
+}
+
+#membersNewRecord {
+    margin-left: calc(100vw - 250px);
+    position: absolute;
+    width: 180px;
+    text-align: right;
+    border: 1px solid #101010;
+    border-radius: 25px;
+    height: 50px;
+    padding-right: 25px;
+    margin-top: -35px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+#membersNewRecord:hover, #membersNewRecordImage:hover ~ #membersNewRecord {
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+    transition: 0.2s;
+}
+
+#membersNewRecordImage {
+    margin-left: calc(100vw - 230px);
+    margin-top: -22px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#sidebarMembers {
+    background-color: #9c5c00;
+}

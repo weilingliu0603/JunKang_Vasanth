@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>The Jurong Pioneer Salon</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/overview.css') }}" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav id = "sidebar">
+            <div id = "sidebarLogo">
+                <div class = "sidebarLogoText">THE</div>
+                <div class = "sidebarLogoTextJP">
+                    <div class = "sidebarLogoText" id = "sidebarLogoJurong">JURONG</div>
+                    <div class = "sidebarLogoText" id = "sidebarLogoPioneer">PIONEER</div>
+                </div>
+                <div class = "sidebarLogoText">SALON</div>
+            </div>
+            <div>
+                <img src = "{{ url_for('static', filename = 'overview.png') }}" id = "sidebarOverviewImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('index') }}">
+                    <button id = "sidebarOverview" class = "sidebarButtons">Overview</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'transactions.png') }}" id = "sidebarTransactionsImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('transactions') }}">
+                    <button id = "sidebarTransactions" class = "sidebarButtons">Transactions</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'members.png') }}" id = "sidebarMembersImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('members') }}">
+                    <button id = "sidebarMembers" class = "sidebarButtons">Members</button>
+                </form>
+            </div>
+        </nav>
+        <div>
+            <div class = "bodyHeadText">Monthly Report</div>
+            <div id = "overviewHeader">
+                <div class = "overviewHeaderClass">Month</div>
+                <div class = "overviewHeaderClass">Year</div>
+                <div class = "overviewHeaderClass" id = "overviewHeaderSalesText">Sales</div>
+                <div class = "overviewHeaderClass">Total Revenue</div>
+            </div>
+            <div id = "overviewData">
+                <div id = "overviewDataHeadSpacer"></div>
+                {% for i in finalData %}
+                    <div class = "overviewRecord">
+                        <div class = "overviewRecordValues overviewRecordMonthValue">{{ i[0] }}</div>
+                        <div class = "overviewRecordValues overviewRecordYearValue">{{ i[1] }}</div>
+                        <div class = "overviewRecordValues overviewRecordSalesValue">{{ i[2] }}</div>
+                        <div class = "overviewRecordValues overviewRecordTotalValue">{{ i[3] }}</div>
+                    </div>
+                {% endfor %}
+                <div id = "overviewDataEndSpacer"></div>
+            </div>
+            <div id = "overviewTotalRevenue">{{ sum }}</div>
+        </div>
+    </body>
+
+</html>

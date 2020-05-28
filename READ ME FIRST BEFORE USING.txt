@@ -1,0 +1,28 @@
+The Jurong Pionner Salon Application by Vasanth and Jun Kang
+
+- We apologise for the late submission due to delays and bugs
+
+- Please note the following when using the application 
+
+> Try to use a monitor that is 1920x1080 in resolution. I have tried my best to support different sizes but for the best experience, use that resolution.
+
+> The checks for inputs are quite minimal and you are likely to either get away with wrong inputs or get an error if you try it out. 
+However, it should work fine if correct inputs are used as we assume that the admins will key the info correctly.
+If you want to try out the input checks, use digits instead of characters or vice versa that supports the latter.
+E.g.: Using a non-existent member ID will likely cause an error for new transaction
+
+> In Transactions, Blue represents Guests, Gold represent Gold membership and discounted transactions.
+
+> The selection of membership in new transaction is on purpose for non-guests. This is not because we are lazy to check if they are a member or not but rather
+in the case where an admin may forget to change the membership status before adding a new transaction (see next point also). The membership option just means
+whether a discount of 10% should be applied.
+
+> Transactions cannot be edited
+
+> There is no searching for a specific date of transaction. You just have to scroll until you find the day that you want to view as it is sorted by date, in DESC order.
+
+> Data used in the database may contain easter eggs that you might not get. Most data would not reflect real life data as it is just test data.
+
+> The value at the bottom right of Overview page is the sum of all revenue in the lifetime
+
+> Key Dates in DD/MM/YYYY where if the DD or MM is single digit, ensure a 0 is infront. e.g: 04/04/2020

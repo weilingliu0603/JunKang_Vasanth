@@ -1,0 +1,103 @@
+#editMemberHeader {
+    display: flex;
+    margin-left: 440px;
+    margin-top: 40px;
+}
+
+.editMemberHeaderClass {
+    padding-right: 90px;
+}
+
+#editMemberSalesText {
+    padding-right: calc(100vw - 1130px + 90px);
+}
+
+#editMemberData {
+    width: calc(100vw - 450px);
+    height: calc(100vh - 525px);
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #7a7a7a;
+    margin-left: 390px;
+    margin-top: 20px;
+    overflow-y: scroll;
+}
+
+#editMemberData::-webkit-scrollbar {
+    width: 20px;
+}
+
+#editMemberData::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 25px;
+    border: 8px solid #101010;
+}
+
+.editMemberRecord {
+    display: flex;
+    text-align: center;
+    height: 75px;
+    border: 1px solid #7a7a7a;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.2s;
+    /* cursor: pointer; */
+    background-color: #101010;
+}
+
+.editMemberRecord:hover {
+    transition: 0.2s;
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+}
+
+.editMemberRecordMonthValue {
+    width: 165px;
+}
+
+.editMemberRecordYearValue {
+    width: 120px;
+}
+
+.editMemberRecordSalesValue {
+    /* padding-right: calc(100vw - 1500px + 90px); */
+    width: calc(100vw - 950px);
+    text-align: left;
+    padding-left: 50px;
+}
+
+.editMemberTotalValue {
+    width: 100px;
+}
+
+.editMemberRecordValues {
+    padding-top: 27px;
+}
+
+#editMemberDataHeadSpacer {
+    height: 10px;
+}
+
+#editMemberDataEndSpacer {
+    height: 30px;
+}
+
+#editMemberTotalRevenue {
+    margin-left: calc(100vw - 255px);
+    width: 175px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#editMemberPastTransaction {
+    position: absolute;
+    margin-left: -390px;
+    margin-top: 270px;
+}
+
+.invisibleEditMemberTransactionDiscount, #invisibleMemberID {
+    opacity: 0;
+    display: none;
+    outline: none;
+    width: 0;
+    height: 0;
+}

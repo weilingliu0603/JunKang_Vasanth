@@ -1,0 +1,239 @@
+#newMemberBody {
+    width: calc(100vw - 450px);
+    height: 280px;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #7a7a7a;
+    margin-left: 390px;
+    margin-top: 20px;
+}
+
+#sidebarMembers {
+    background-color: #9c5c00;
+}
+
+#newMemberRow2 {
+    display: flex;
+}
+
+.newMemberInputText {
+    height: 50px;
+    background-color: transparent;
+    border-radius: 25px;
+    border: 1px solid white;
+    transition: 0.2s;
+    margin: 10px;
+    margin-top: 35px;
+    outline: none;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* .newMemberInputText:hover, .newMemberInputText:focus {
+    border: 1px solid #9c5c00;
+    transition: 0.2s;
+} */
+
+/* #newMemberMembership1:hover, #newMemberMembership2:hover, #newMemberGender1:hover, #newMemberGender2:hover {
+    background-color: #9c5c00;
+} */
+
+#newMemberMembership1:hover ~ #newMemberFormFieldMembership, #newMemberMembership2:hover ~ #newMemberFormFieldMembership {
+    color: white;
+    transition: 0.2s;
+}
+
+#newMemberGender1:hover ~ #newMemberFormFieldGender, #newMemberGender2:hover ~ #newMemberFormFieldGender {
+    color: white;
+    transition: 0.2s;
+}
+
+/* #newMemberName:focus ~ #newMemberFormFieldName {
+    margin-left: 30px;
+    margin-top: -78px;
+    color: white;
+    transition: 0.2s;
+    z-index: 2;
+} */
+
+/* #newMemberEmail:focus ~ #newMemberFormFieldEmail {
+    margin-left: 580px;
+    margin-top: -78px;
+    color: white;
+    transition: 0.2s;
+    z-index: 2;
+}  */
+
+/* #newMemberPhone:focus ~ #newMemberFormFieldPhone {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    transition: 0.2s;
+    z-index: 2;
+} */
+
+/* #newMemberAddress:focus ~ #newMemberFormFieldAddress {
+    margin-left: 580px;
+    margin-top: 20px;
+    color: white;
+    transition: 0.2s;
+    z-index: 2;
+} */
+
+#newMemberName {
+    width: 480px;
+}
+
+#newMemberEmail, #newMemberAddress {
+    width: calc(100vw - 1085px);
+}
+
+#newMemberForm {
+    width: calc(100vw - 470px);
+}
+
+#newMemberPhone {
+    width: 100px;
+}
+
+#newMemberMembership1, #newMemberMembership2, #newMemberGender1, #newMemberGender2 {
+    border: 1px solid white;
+    border-radius: 25px;
+    transition: 0.2s;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    padding-top: 18px;
+    font-size: 14px;
+}
+
+#newMemberMembership1, #newMemberMembership2 {
+    width: calc(186px/2);
+}
+
+#newMemberMembership1 {
+    margin-left: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#newMemberMembership2 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#newMemberGender1, #newMemberGender2 {
+    width: calc(145px/2);
+}
+
+#newMemberGender1 {
+    margin-left: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#newMemberGender2 {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#newMemberAddress {
+    margin-left: 25px;
+}
+
+.newMemberFormFieldNames {
+    position: absolute;
+    padding: 5px;
+    background-color: #101010;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#newMemberFormFieldName {
+    margin-left: 35px;
+    margin-top: -53px;
+    color: #888888;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+#newMemberFormFieldEmail {
+    margin-left: 585px;
+    margin-top: -53px;
+    color: #888888;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+#newMemberFormFieldPhone {
+    margin-left: 35px;
+    margin-top: 47px;
+    color: #888888;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+#newMemberFormFieldMembership {
+    margin-left: 220px;
+    margin-top: 20px;
+    color: lightgray;
+    transition: 0.2s;
+}
+
+#newMemberFormFieldGender {
+    margin-left: 425px;
+    margin-top: 20px;
+    color: lightgray;
+    transition: 0.2s;
+}
+
+#newMemberFormFieldAddress {
+    margin-left: 585px;
+    margin-top: 47px;
+    color: #888888;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+#newMemberSubmit {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+    color: lightgray;
+    margin-left: calc(100vw - 635px);
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    outline: none;
+}
+
+#newMemberSubmit:hover {
+    border: 1px solid #9c5c00;
+    background-color: #9c5c00;
+    transition: 0.2s;
+}
+
+#membershipGender, #invisibleErrorString {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    color: transparent;
+    opacity: 0;
+}
+
+#invalidText {
+    position: absolute;
+    margin-left: calc(100vw - 800px);
+    font-size: 14px;
+    margin-top: -28px;
+    color: indianred;
+}

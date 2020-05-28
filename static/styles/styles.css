@@ -1,0 +1,125 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    background-color: #101010;
+    color: white;
+    font-weight: 600;
+}
+
+#sidebarLogo {
+    width: 300px;
+    font-size: 20px;
+    margin-top: 45px;
+    font-weight: 600;
+}
+
+.sidebarLogoText {
+    text-align: center;
+    margin-left: -50px;
+}
+
+.sidebarButtons {
+    width: 300px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    padding-left: 140px;
+    font-size: 16px;
+    margin-top: 18px;
+    height: 60px;
+    transition: 0.2s;
+    border-radius: 50px;
+    margin-left: -50px;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    font-weight: 600;
+}
+
+#sidebarOverview {
+    margin-top: 43px;
+}
+
+.sidebarButtons:hover {
+    background-color: #9c5c00;
+    transition: 0.2s;
+}
+
+.sidebarImages {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+#sidebarOverviewImage {
+    margin-top: 57px;
+}
+
+#sidebarTransactionsImage:hover ~ #sidebarTransactions, #sidebarMembersImage:hover ~ #sidebarMembers, #sidebarOverviewImage:hover ~ #sidebarOverview  {
+    background-color: #9c5c00;
+    transition: 0.2s;
+}
+
+.bodyHeadText {
+    margin-left: 400px;
+    font-weight: 600;
+    margin-top: -280px;
+}
+
+.successfullyUpdatedDatabase, .successfullyUpdatedDatabaseText {
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    padding-top: 20px;
+    color: limegreen;
+    position: absolute;
+    margin-left: calc(100vw - 520px);
+    margin-top: -10000px;
+}
+
+.successfullyUpdatedDatabase {
+    border-bottom: 1px solid limegreen;
+}
+
+.invisibleSuccess {
+    display: 0;
+    margin-top: -10000px;
+}
+
+.backButton {
+    filter: invert(1);
+    position: absolute;
+    margin-left: 330px;
+    margin-top: -5px;
+    transform: scale(1.25);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    transition: 0.2s;
+    border: 4px solid #ccc;
+    background-color: #ccc;
+}
+
+.sidebarLogoTextJP {
+    display: flex;
+    justify-content: center;
+}
+
+#sidebarLogoJurong, #sidebarLogoPioneer {
+    width: 140px;
+}
+/* 
+#sidebarLogoJurong {
+    color: #8b1c42;
+}
+
+#sidebarLogoPioneer {
+    color: #0f2d53;
+} */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>The Jurong Pioneer Salon</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/new-member.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="{{ url_for('static', filename='new-member.js') }}"></script>
+    </head>
+
+    <body>
+        <nav id = "sidebar">
+            <div id = "sidebarLogo">
+                <div class = "sidebarLogoText">THE</div>
+                <div class = "sidebarLogoTextJP">
+                    <div class = "sidebarLogoText" id = "sidebarLogoJurong">JURONG</div>
+                    <div class = "sidebarLogoText" id = "sidebarLogoPioneer">PIONEER</div>
+                </div>
+                <div class = "sidebarLogoText">SALON</div>
+            </div>
+            <div>
+                <img src = "{{ url_for('static', filename = 'overview.png') }}" id = "sidebarOverviewImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('index') }}">
+                    <button id = "sidebarOverview" class = "sidebarButtons">Overview</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'transactions.png') }}" id = "sidebarTransactionsImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('transactions') }}">
+                    <button id = "sidebarTransactions" class = "sidebarButtons">Transactions</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'members.png') }}" id = "sidebarMembersImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('members') }}">
+                    <button id = "sidebarMembers" class = "sidebarButtons">Members</button>
+                </form>
+            </div>
+        </nav>
+        <div>
+            <a href = "{{ url_for('members') }}" method = "GET">
+                <img src = "{{ url_for('static', filename = 'back.svg') }}" class = "backButton">
+            </a>
+            <div class = "bodyHeadText">New Member #{{ newMemberID }}</div>
+            <div id = "newMemberBody">
+                <form method = "POST" action = "{{ url_for('newMemberCheck') }}" id = "newMemberForm">
+                    <div id = "newMemberRow1">
+                        <input type = "text" id = "newMemberName" class = "newMemberInputText" name = "name" value = "{{ previousInputs[0] }}">
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldName">Name</div>
+                        <input type = "text" id = "newMemberEmail" class = "newMemberInputText" name = "email" value = "{{ previousInputs[1] }}">
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldEmail">Email</div>
+                    </div>
+                    <div id = "newMemberRow2">
+                        <input type = "text" id = "newMemberPhone" class = "newMemberInputText" name = "phone" value = "{{ previousInputs[2] }}">
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldPhone">Phone</div>
+                        <div id = "newMemberMembership1">Regular</div>
+                        <div id = "newMemberMembership2">Gold</div>
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldMembership">Membership</div>
+                        <div id = "newMemberGender1">M</div>
+                        <div id = "newMemberGender2">F</div>
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldGender">Gender</div>
+                        <input type = "text" id = "newMemberAddress" class = "newMemberInputText" name = "address" value = "{{ previousInputs[3] }}">
+                        <div class = "newMemberFormFieldNames" id = "newMemberFormFieldAddress">Address</div>
+                        <input type = "text" id = "membershipGender" name = "membershipgender" value = "{{ previousInputs[4] }}">
+                    </div>
+                    <button id = "newMemberSubmit">Add Member</button>
+                </form>
+                <div id = "invalidText">
+                    {{ failedText }}
+                </div>
+                <div id = "invisibleErrorString">
+                    {{ errorString }}
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

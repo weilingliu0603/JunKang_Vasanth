@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>The Jurong Pioneer Salon</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/transactions.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src = "{{ url_for('static', filename = 'transactions.js') }}"></script>
+        <script src = "{{ url_for('static', filename = 'success-animation.js') }}"></script>
+    </head>
+
+    <body>
+        <nav id = "sidebar">
+            <div id = "sidebarLogo">
+                <div class = "sidebarLogoText">THE</div>
+                <div class = "sidebarLogoTextJP">
+                    <div class = "sidebarLogoText" id = "sidebarLogoJurong">JURONG</div>
+                    <div class = "sidebarLogoText" id = "sidebarLogoPioneer">PIONEER</div>
+                </div>
+                <div class = "sidebarLogoText">SALON</div>
+            </div>
+            <div>
+                <img src = "{{ url_for('static', filename = 'overview.png') }}" id = "sidebarOverviewImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('index') }}">
+                    <button id = "sidebarOverview" class = "sidebarButtons">Overview</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'transactions.png') }}" id = "sidebarTransactionsImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('transactions') }}">
+                    <button id = "sidebarTransactions" class = "sidebarButtons">Transactions</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'members.png') }}" id = "sidebarMembersImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('members') }}">
+                    <button id = "sidebarMembers" class = "sidebarButtons">Members</button>
+                </form>
+            </div>
+        </nav>
+        <div>
+            <div class = "bodyHeadText">Transaction History</div>
+            <form action = "{{ url_for('newTransaction') }}" method = "GET">
+                <img id = "transactionsNewRecordImage" src = "{{ url_for('static', filename = 'new.png') }}">
+                <button id = "transactionsNewRecord">New Record</button>
+            </form>
+            <div id = "transactionsHeader">
+                <div class = "transactionsHeaderClass">ID</div>
+                <div class = "transactionsHeaderClass">Date</div>
+                <div class = "transactionsHeaderClass">Member/ID</div>
+                <div class = "transactionsHeaderClass" id = "transactionsHeaderServiceTypeText">Service Type</div>
+                <div class = "transactionsHeaderClass">Total Price</div>
+            </div>
+            <div id = "transactionsData">
+                <div id = "transactionsHeadSpacer"></div>
+                {% for i in finalData %}
+                    <div class = "transactionsRecord">
+                        <div class = "transactionsRecordValues transactionsRecordTXID">{{ i[0] }}</div>
+                        <div class = "transactionsRecordValues transactionsRecordDate">{{ i[1] }}</div>
+                        <div class = "transactionsRecordValues transactionsRecordMember">{{ i[2] }}</div>
+                        <div class = "transactionsRecordValues transactionsRecordService">{{ i[3] }}</div>
+                        <div class = "transactionsRecordValues transactionsRecordPrice">{{ i[4] }}</div>
+                        <div class = "invisibleMemberType">{{ i[5] }}</div>
+                    </div>
+                {% endfor %}
+                <div id = "transactionsEndSpacer"></div>
+            </div>
+        </div>
+        <div class = "successfullyUpdatedDatabase"></div>
+        <p class = "successfullyUpdatedDatabaseText">Transaction Successfully Added!</p>
+        <div class = "invisibleSuccess">{{ redirect }}</div>
+    </body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>The Jurong Pioneer Salon</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', filename='styles/new-transaction.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src = "{{ url_for('static', filename = 'new-transaction.js') }}"></script>
+    </head>
+
+    <body>
+        <nav id = "sidebar">
+            <div id = "sidebarLogo">
+                <div class = "sidebarLogoText">THE</div>
+                <div class = "sidebarLogoTextJP">
+                    <div class = "sidebarLogoText" id = "sidebarLogoJurong">JURONG</div>
+                    <div class = "sidebarLogoText" id = "sidebarLogoPioneer">PIONEER</div>
+                </div>
+                <div class = "sidebarLogoText">SALON</div>
+            </div>
+            <div>
+                <img src = "{{ url_for('static', filename = 'overview.png') }}" id = "sidebarOverviewImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('index') }}">
+                    <button id = "sidebarOverview" class = "sidebarButtons">Overview</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'transactions.png') }}" id = "sidebarTransactionsImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('transactions') }}">
+                    <button id = "sidebarTransactions" class = "sidebarButtons">Transactions</button>
+                </form>
+            </div>
+            <div>        
+                <img src = "{{ url_for('static', filename = 'members.png') }}" id = "sidebarMembersImage" class = "sidebarImages">
+                <form method = "POST" action = "{{ url_for('members') }}">
+                    <button id = "sidebarMembers" class = "sidebarButtons">Members</button>
+                </form>
+            </div>
+        </nav>
+        <div>
+            <a href = "{{ url_for('transactions') }}" method = "GET">
+                <img src = "{{ url_for('static', filename = 'back.svg') }}" class = "backButton">
+            </a>
+            <form method = "POST" action = "{{ url_for('newTransactionCheck') }}">
+                <div class = "bodyHeadText" id = "bodyHead1">New Transaction (#{{ newTransactionID }})</div>
+                <div class = "transactionsData" id = "transactionsData1">
+                    <div class = "transactionsHeadSpacer"></div>
+
+                    <div id = "newTransactionInfoRow1" class = "newTransactionInfo">
+
+                        <input class = "newTransactionDate newTransactionInputs" name = "date" type = "text" value = "{{ inputDateValue }}">
+                        <div class = "newTransactionOverlays" id = "newTransactionDateText">Date (DD/MM/YYYY)</div>
+    
+                        <div class = "newTransactionMembership newTX1-1" id = "newTransactionMembershipLeft">Regular</div>
+                        <div class = "newTransactionMembership newTX1-2" id = "newTransactionMembershipRight">Gold</div>
+                        <div class = "newTransactionMembershipText">Membership</div>
+
+                    </div>
+
+                    <div id = "newTransactionInfoRow2" class = "newTransactionInfo">
+
+                        <div class = "newTransactionGuest newTX1-3">No</div>
+                        <div class = "newTransactionGuestText">Guest?</div>
+    
+                        <input class = "newTransactionID newTransactionInputs" name = "ID" type = "text" value = "{{ inputIDValue }}">
+                        <div class = "newTransactionOverlays" id = "newTransactionIDText">Member ID</div>
+    
+                        <input class = "newTransactionInvisible" id = "newTransactionInvisible1" name = "invisible1" value = "{{ invisible1Value }}">
+
+                    </div>
+
+                    <div class = "transactionsEndSpacer"></div>
+                </div>
+                <div class = "bodyHeadText" id = "bodyHead2">Services Given</div>
+                <div class = "transactionsData" id = "transactionsData2">
+                    <!-- <div class = "transactionsHeadSpacer"></div> -->
+
+                    <div id = "newTransactionServicesRow1" class = "newTransactionServices">
+
+                        <div class = "newTransactionCut newTX2-1" id = "newTransactionCutLeft">Short</div>
+                        <div class = "newTransactionCut newTX2-2" id = "newTransactionCutCentre">Medium</div>
+                        <div class = "newTransactionCut newTX2-3" id = "newTransactionCutRight">Long</div>
+                        <div class = "newTransactionCutText">Cut</div>
+
+                        <div class = "newTransactionPerm newTX2-4">Perm</div>
+
+                    </div>
+
+                    <div id = "newTransactionServicesRow2" class = "newTransactionServices">
+
+                        <div class = "newTransactionColour newTX2-5">Colour</div>
+
+                        <div class = "newTransactionRebonding newTX2-6">Rebonding</div>
+
+                    </div>
+
+                    <div id = "newTransactionServicesRow3" class = "newTransactionServices">
+
+                        <div class = "newTransactionHighlight newTX2-7" id = "newTransactionHighlightLeft">Half</div>
+                        <div class = "newTransactionHighlight newTX2-8" id = "newTransactionHighlightRight">Full</div>
+                        <div class = "newTransactionHighlightText">Highlight</div>
+
+                        <div class = "newTransactionTreatment newTX2-9">Treatment</div>
+
+                    </div>
+
+                    <input class = "newTransactionInvisible" id = "newTransactionInvisible2" name = "invisible2" value = "{{ invisible2Value }}">
+
+                    <!-- <div class = "transactionsEndSpacer"></div> -->
+                </div>
+                <button id = "newTransactionButton">Add Transaction</button>
+            </form>
+            <input type = "text" value = "{{ errorValues }}" id = "invisibleErrorValues">
+        </div>
+    </body>
+
+</html>

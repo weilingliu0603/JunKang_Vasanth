@@ -1,0 +1,349 @@
+/* #transactionsHeader {
+    display: flex;
+    margin-left: 440px;
+    margin-top: 60px;
+}
+
+.transactionsHeaderClass {
+    padding-right: 90px;
+}
+
+#transactionsHeaderServiceTypeText {
+    padding-right: calc(100vw - 1230px + 90px);
+} */
+
+.transactionsData {
+    width: calc(100vw - 450px);
+    height: 280px;
+    border-top: 1px solid #7a7a7a;
+    border-bottom: 1px solid #7a7a7a;
+    margin-left: 390px;
+    overflow: hidden;
+}
+
+#bodyHead1 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#bodyHead2 {
+    position: absolute;
+    margin-top: -44px;
+    font-size: 20px;
+}
+
+#transactionsData1 {
+    margin-top: 20px;
+}
+
+#transactionsData2 {
+    margin-top: -1px;
+    height: 300px;
+}
+
+.transactionsData::-webkit-scrollbar {
+    width: 20px;
+}
+
+.transactionsData::-webkit-scrollbar-thumb {
+    background-color: #282828;
+    border-radius: 25px;
+    border: 8px solid #101010;
+}
+
+/* .transactionsRecord {
+    display: flex;
+    text-align: center;
+    height: 75px;
+    border: 1px solid #7a7a7a;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #101010;
+}
+
+.transactionsRecord:hover {
+    transition: 0.2s;
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+}
+
+.transactionsRecordTXID {
+    width: 115px;
+}
+
+.transactionsRecordDate {
+    width: 105px;
+}
+
+.transactionsRecordMember {
+    width: 195px;
+}
+
+.transactionsRecordService {
+    padding-right: calc(100vw - 1300px + 90px);
+    width: 175px;
+    text-align: left;
+    padding-left: 35px;
+}
+
+.transactionsRecordValues {
+    padding-top: 27px;
+} */
+
+.transactionsHeadSpacer {
+    height: 10px;
+}
+
+.transactionsEndSpacer {
+    height: 30px;
+}
+
+/* #transactionsNewRecord {
+    margin-left: calc(100vw - 250px);
+    position: absolute;
+    width: 170px;
+    text-align: right;
+    border: 1px solid #101010;
+    border-radius: 25px;
+    height: 50px;
+    padding-right: 25px;
+    margin-top: -35px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+#transactionsNewRecord:hover, #transactionsNewRecordImage:hover ~ #transactionsNewRecord {
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+    transition: 0.2s;
+}
+
+#transactionsNewRecordImage {
+    margin-left: calc(100vw - 230px);
+    margin-top: -22px;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#sidebarTransactions {
+    background-color: #9c5c00;
+}*/
+
+.newTransactionInvisible, #invisibleErrorValues {
+    opacity: 0;
+    display: none;
+    outline: none;
+    width: 0;
+    height: 0;
+}
+
+.newTransactionInfo, .newTransactionServices {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#newTransactionServicesRow1, #newTransactionServicesRow1 {
+    margin-top: 40px;
+}
+
+.newTransactionInputs, .newTransactionMembership, .newTransactionGuest, .newTransactionCut, .newTransactionPerm, .newTransactionColour, .newTransactionRebonding, .newTransactionHighlight, .newTransactionTreatment {
+    height: 35px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.newTransactionMembership, .newTransactionGuest, .newTransactionCut, .newTransactionPerm, .newTransactionColour, .newTransactionRebonding, .newTransactionHighlight, .newTransactionTreatment {
+    padding-top: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.newTransactionPerm, .newTransactionRebonding, .newTransactionTreatment {
+    margin-left: 20px;
+}
+
+.newTransactionInputs {
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 50px;
+}
+
+.newTransactionDate {
+    width: 190px;
+}
+
+.newTransactionID {
+    width: 340px;
+}
+
+.newTransactionMembership {
+    width: 125px;
+}
+
+.newTransactionGuest {
+    width: 100px;
+}
+
+.newTransactionCut {
+    width: calc(250px/3);
+}
+
+.newTransactionPerm {
+    width: 250px;
+}
+
+.newTransactionColour {
+    width: 250px;
+}
+
+.newTransactionRebonding {
+    width: 250px;
+}
+
+.newTransactionHighlight {
+    width: 125px;
+}
+
+.newTransactionTreatment {
+    width: 250px;
+}
+
+.newTransactionOverlays, .newTransactionMembershipText, .newTransactionGuestText, .newTransactionCutText, .newTransactionHighlightText {
+    position: absolute;
+}
+
+.newTransactionGuestText {
+    margin-left: 21px;
+    margin-top: -10px;
+    width: 55px;
+    background: #101010;
+    padding-left: 5px;
+    border-radius: 25px;
+    height: 21px;
+}
+
+.newTransactionMembershipText {
+    margin-left: 345px;
+    margin-top: -10px;
+    z-index: 2;
+    width: 100px;
+    border-radius: 25px;
+    background: #101010;
+    padding-left: 10px;
+    height: 23px;
+}
+
+.newTransactionCutText {
+    margin-left: 110px;
+    margin-top: -10px;
+    background-color: #101010;
+    border-radius: 25px;
+    z-index: 2;
+    width: 33px;
+    padding-left: 5px;
+    height: 21px;
+}
+
+.newTransactionHighlightText {
+    margin-left: 87px;
+    margin-top: -10px;
+    background-color: #101010;
+    border-radius: 25px;
+    z-index: 2;
+    width: 75px;
+    height: 23px;
+    padding-left: 7px;
+}
+
+#newTransactionDateText {
+    margin-left: 25px;
+    margin-top: 17.5px;
+    color: rgb(136, 136, 136);
+    background-color: #101010;
+    width: 157.5px;
+    border-radius: 25px;
+    padding-left: 5px;
+    z-index: -1;
+}
+
+#newTransactionIDText {
+    margin-left: 145px;
+    margin-top: 17.5px;
+    color: rgb(136, 136, 136);
+    background-color: #101010;
+    width: 85px;
+    border-radius: 25px;
+    padding-left: 5px;
+    z-index: -1;
+}
+
+#newTransactionCutLeft, #newTransactionHighlightLeft, #newTransactionMembershipLeft {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#newTransactionCutRight, #newTransactionHighlightRight, #newTransactionMembershipRight {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#newTransactionCutCentre {
+    border-radius: 0px;
+}
+
+#newTransactionMembershipLeft, .newTransactionID  {
+    margin-left: 20px;
+}
+
+#newTransactionInfoRow1 {
+    margin-top: 30px;
+}
+
+#newTransactionInfoRow2 {
+    margin-top: 5px;
+}
+
+#sidebarTransactions {
+    background-color: #9c5c00;
+}
+
+#newTransactionButton {
+    height: 50px;
+}
+
+#newTransactionButton {
+    height: 50px;
+    width: 200px;
+    font-size: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    margin-left: calc(100vw - 300px);
+    margin-top: 40px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#newTransactionButton:hover {
+    transition: 0.2s;
+    background-color: #9c5c00;
+    border: 1px solid #9c5c00;
+}
